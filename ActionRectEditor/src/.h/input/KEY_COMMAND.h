@@ -7,9 +7,11 @@ enum class KEY_COMMAND
 	// 決定
 	DECIDE,
 	// リセット
-	RESET,
+	UNDO,
 	// 保存
 	SAVE,
+	// コントロールキー
+	CTRL,
 	MAX
 };
 

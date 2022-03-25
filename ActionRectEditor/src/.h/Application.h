@@ -1,8 +1,10 @@
 #pragma once
 #include <memory>
 #include "../.h/Geometory.h"
+#include "../.h/scene/BaseScene.h"
 
 class KeyInput;
+class MouseInput;
 
 #define lpApplication Application::GetInstance()
 
@@ -56,5 +58,8 @@ private:
 	ScrSize scrSize_;
 
 	std::shared_ptr<KeyInput> key_;
+	std::shared_ptr<MouseInput> mouse_;
+
+	UniqueScene scene_;
 };
 

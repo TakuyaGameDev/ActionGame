@@ -1,1 +1,2 @@
 C:\Users\takuy\source\repos\ActionRectEditor\x64\Debug\ActionRectEditor.exe
+D:\GameDev\ActionGame\ActionRectEditor\x64\Debug\ActionRectEditor.exe

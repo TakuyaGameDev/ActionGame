@@ -29,26 +29,26 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -145,18 +145,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\.cpp\input\MouseInput.cpp" />
+    <ClCompile Include="src\.cpp\scene\BaseScene.cpp" />
     <ClCompile Include="src\.cpp\Application.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="src\.cpp\Geometory.cpp" />
     <ClCompile Include="src\.cpp\input\KeyInput.cpp" />
+    <ClCompile Include="src\.cpp\scene\StartUp.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\.h\input\MouseInput.h" />
+    <ClInclude Include="src\.h\scene\BaseScene.h" />
     <ClInclude Include="src\.h\Application.h" />
     <ClInclude Include="src\.h\Geometory.h" />
     <ClInclude Include="src\.h\input\KeyInput.h" />
     <ClInclude Include="src\.h\input\KEY_COMMAND.h" />
     <ClInclude Include="src\.h\input\MOUSE_COMMAND.h" />
     <ClInclude Include="src\.h\input\TRG.h" />
+    <ClInclude Include="src\.h\scene\StartUp.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,6 +1,9 @@
 #include <DxLib.h>
 #include "../.h/Application.h"
 #include "../.h/input/KeyInput.h"
+#include "../.h/input/MouseInput.h"
+
+#include "../.h/scene/StartUp.h"
 
 void Application::Run(void)
 {
@@ -12,7 +15,12 @@ void Application::Run(void)
     }
     while (ProcessMessage() == 0 && CheckHitKey(KEY_INPUT_ESCAPE) == 0)
     {
-
+        // キーボード押下情報更新
+        key_->Update();
+        // マウス情報の更新
+        mouse_->Update();
+        // シーン更新
+        scene_ = scene_->Update(move(scene_), key_,mouse_);
     }
 }
 
@@ -33,6 +41,7 @@ Application::~Application()
 
 bool Application::SystemInit(void)
 {
+    // 各画面サイズの設定
     SetScreenSize({ SCREEN_X,SCREEN_Y }, { IMAGE_SCREEN_X,IMAGE_SCREEN_Y });
     // 設定した画面サイズで画面表示
     SetGraphMode(scrSize_.screen_.x, scrSize_.screen_.y, 16);
@@ -44,7 +53,20 @@ bool Application::SystemInit(void)
     {
         return false;
     }
-    // キーボード入力装置取得
+    // キーボード入力装置生成
     key_ = std::make_shared<KeyInput>();
+    // 決定ボタン
+    key_->SetKeyCommand(KEY_COMMAND::DECIDE, KEY_INPUT_RETURN);
+    // セーブボタン
+    key_->SetKeyCommand(KEY_COMMAND::SAVE, KEY_INPUT_S);
+    // undoボタン
+    key_->SetKeyCommand(KEY_COMMAND::UNDO, KEY_INPUT_Z);
+    // コントロールキー
+    key_->SetKeyCommand(KEY_COMMAND::CTRL, KEY_INPUT_LCONTROL);
+    // マウス入力装置生成
+    mouse_ = std::make_shared<MouseInput>();
+
+    // 初期シーンでインスタンス
+    scene_ = std::make_unique<StartUp>();
 	return true;
 }
