@@ -1,0 +1,18 @@
+#pragma once
+#include <vector>
+#include "ObjectPool.h"
+
+class EnemyPool :
+    public ObjectPool
+{
+public:
+    EnemyPool(int size);
+    ~EnemyPool();
+    // çXêV
+    void Update(void);
+    // ï`âÊ
+    void Draw(void);
+
+private:
+};
+

@@ -1,0 +1,13 @@
+#pragma once
+
+// ‚Ó‚é‚Ü‚¢‚Ì–@‘¥‚ðŒˆ’è‚·‚éƒNƒ‰ƒX
+class BehaviorData
+{
+public:
+	BehaviorData();
+	~BehaviorData();
+
+private:
+
+};
+
