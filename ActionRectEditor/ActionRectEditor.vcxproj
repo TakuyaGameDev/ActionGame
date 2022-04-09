@@ -118,6 +118,7 @@
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(DXLIB_DIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -135,6 +136,7 @@
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(DXLIB_DIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -145,6 +147,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\.cpp\scene\RectEdit.cpp" />
+    <ClCompile Include="src\.cpp\FileLoader.cpp" />
+    <ClCompile Include="src\.cpp\ImageManager.cpp" />
+    <ClCompile Include="src\.cpp\Animation.cpp" />
     <ClCompile Include="src\.cpp\input\MouseInput.cpp" />
     <ClCompile Include="src\.cpp\scene\BaseScene.cpp" />
     <ClCompile Include="src\.cpp\Application.cpp" />
@@ -154,6 +160,10 @@
     <ClCompile Include="src\.cpp\scene\StartUp.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\.h\scene\RectEdit.h" />
+    <ClInclude Include="src\.h\FileLoader.h" />
+    <ClInclude Include="src\.h\ImageManager.h" />
+    <ClInclude Include="src\.h\Animation.h" />
     <ClInclude Include="src\.h\input\MouseInput.h" />
     <ClInclude Include="src\.h\scene\BaseScene.h" />
     <ClInclude Include="src\.h\Application.h" />
